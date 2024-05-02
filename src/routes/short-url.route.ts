@@ -5,6 +5,10 @@ import { isUrl } from '../utils';
 
 const router = express.Router();
 
+router.get('/', (req: Request, res: Response) => {
+  return res.sendStatus(200);
+});
+
 router.post(
   '/shortenUrl',
   async (req: Request, res: Response, next: NextFunction) => {
